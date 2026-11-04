@@ -70,30 +70,9 @@ footer b{font-family:'Cinzel',serif;color:var(--gold);letter-spacing:.3em}
 .tape-strip{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto;max-width:980px}
 section>*{position:relative;z-index:1}
 /* entrada animada, como en el video */
-@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
-@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes handin{from{opacity:0;transform:translateY(-75%)}to{opacity:1;transform:none}}
 @keyframes sway{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.8deg)}}
 .hero-hand{transform-origin:70% 0;animation:handin 1.8s cubic-bezier(.2,.8,.2,1) .2s both,sway 6s ease-in-out 2s infinite}
-.crown path{stroke-dasharray:1;animation:draw 1.5s ease-in-out .1s both}
-.crown path+path{animation-delay:.9s;animation-duration:.7s}
-.l-punto{animation:rise .9s ease-out .5s both}
-.l-social{animation:rise 1s ease-out .85s both}
-.hero .swoosh{transform-origin:0 50%;animation:grow .9s ease-out both}
-.hero .logo2 .swoosh{animation-delay:1.5s}
-.hero>.swoosh{animation-delay:3.3s}
-.hero .rule{animation:rise .8s ease-out 1.9s both}
-.hero .esp{animation:rise 1s ease-out 2.3s both}
-.hero h1{animation:rise 1s ease-out 2.7s both}
-.hero .date{animation:rise .9s ease-out 3.6s both}
-.hero .dow{animation:rise .8s ease-out 4s both}
-.hero p{animation:rise .8s ease-out 4.2s both}
-.hero .tema{animation:rise .8s ease-out 4.5s both}
-.hero .loc{animation:rise .8s ease-out 4.7s both}
-.hero .count{animation:rise .8s ease-out 4.9s both}
-@keyframes fade{from{opacity:0}}
-.hero .btn{animation:fade .8s ease-out 5.1s both}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
 .loc{position:relative;z-index:1;display:inline-flex;gap:8px;align-items:center;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-size:clamp(12px,3.4vw,14px)}
 .tema{position:relative;z-index:1;border-block:1px solid rgba(217,189,122,.5);padding:8px 26px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;font-size:clamp(11px,3.2vw,13px);color:var(--soft)}
